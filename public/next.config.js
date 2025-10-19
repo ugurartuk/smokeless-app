@@ -2,7 +2,7 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Bu redirect (yönlendirme) kısmı Farcaster için zorunludur.
+  // Bu redirects (yönlendirme) fonksiyonu Next.js'e yönlendirmeleri bildirir.
   async redirects() {
     return [
       {
@@ -12,7 +12,7 @@ const nextConfig = {
         // Farcaster'ın barındırdığı manifest adresine yönlendir (Hedef)
         destination: "https://api.farcaster.xyz/miniapps/hosted-manifest/0199fc2b-6a1c-aa7f-82ae-cd97672f2ef7", 
         
-        // Bu ayar, 307 (Geçici Yönlendirme) kodunu kullanmamızı sağlar.
+        // Farcaster'ın istediği 307 (Geçici Yönlendirme) kodunu kullanır.
         permanent: false, 
       },
     ];
